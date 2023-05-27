@@ -25,6 +25,9 @@
         <spring-boot.version>2.7.6</spring-boot.version>
         <!-- spring cloud 版本 -->
         <spring-cloud.version>Hoxton.SR3</spring-cloud.version>
+        <!--直接引入一个自定义的空的logback-->
+        <logback.version>1.0-empty-SNAPSHOT</logback.version>
+        <log4j2.version>2.16.0</log4j2.version>
 
         <lombok.version>1.18.22</lombok.version>
         <fastjson.version>1.2.72</fastjson.version>
@@ -130,6 +133,35 @@
             <version>3.1.5</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${commons-lang3.version}</version>
+        </dependency>
+
+        <!--传统属性注入支持-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <version>${spring-boot.version}</version>
+        </dependency>
+        <!--
+        springboot默认使用logback，所以想使用springboot+log4j，就需要全局排除掉springboot中默认的logback.全局排除spring-boot-starter-logging的依赖。
+        把spring-boot-starter-logging写成独立的dependency，然后用exclusion排除其中的所有依赖，就等于没有依赖spring-boot-starter-logging了
+        还需要配合引入一个自定义的空的logback实现，见上方
+        <logback.version>1.0-empty-SNAPSHOT</logback.version>
+        -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-logging</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>*</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
     </dependencies>
 
     <dependencyManagement>
@@ -163,6 +195,12 @@
             <dependency>
                 <groupId>com.ihankun.core.db</groupId>
                 <artifactId>db</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.ihankun.core.log</groupId>
+                <artifactId>log</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
         </dependencies>
