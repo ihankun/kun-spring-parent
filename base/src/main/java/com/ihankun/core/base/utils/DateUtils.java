@@ -1,4 +1,4 @@
-package com.ihankun.core.commons.utils;
+package com.ihankun.core.base.utils;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.util.StringUtils;
@@ -24,12 +24,12 @@ public class DateUtils {
     private static final String DAY_SPLIT = "00:00:00";
 
     private static SimpleDateFormat getFormat(String format) {
-        SimpleDateFormat simpleDateFormat = formatMap.get(format.hashCode());
-        if (simpleDateFormat == null) {
-            simpleDateFormat = new SimpleDateFormat(format);
-            formatMap.put(format.hashCode(), simpleDateFormat);
-        }
-        return simpleDateFormat;
+//        SimpleDateFormat simpleDateFormat = formatMap.get(format.hashCode());
+//        if (simpleDateFormat == null) {
+//            simpleDateFormat = new SimpleDateFormat(format);
+//            formatMap.put(format.hashCode(), simpleDateFormat);
+//        }
+        return new SimpleDateFormat(format);
     }
 
     /**

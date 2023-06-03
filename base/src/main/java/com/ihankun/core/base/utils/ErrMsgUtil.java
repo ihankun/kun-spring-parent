@@ -1,4 +1,4 @@
-package com.ihankun.core.commons.utils;
+package com.ihankun.core.base.utils;
 
 import lombok.extern.apachecommons.CommonsLog;
 
@@ -6,5 +6,5 @@ import lombok.extern.apachecommons.CommonsLog;
  * @author hankun
  */
 @CommonsLog
-public class ErrMsgUtils {
+public class ErrMsgUtil {
 }

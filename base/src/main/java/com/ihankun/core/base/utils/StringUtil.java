@@ -1,4 +1,4 @@
-package com.ihankun.core.commons.utils;
+package com.ihankun.core.base.utils;
 
 /**
  * @author hankun
