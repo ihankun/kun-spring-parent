@@ -39,6 +39,16 @@
         <mybatis-plus.version>3.2.0</mybatis-plus.version>
         <pagehelper.version>5.3.1</pagehelper.version>
         <mapstruct.version>1.3.0.Final</mapstruct.version>
+
+        <swagger.version>2.9.2</swagger.version>
+        <swagger.bootstrap.ui.version>2.0.2</swagger.bootstrap.ui.version>
+        <seata.version>1.4.2</seata.version>
+        <!--springcloud-alibaba 版本-->
+        <spring-cloud-alibaba.version>2.2.1.RELEASE</spring-cloud-alibaba.version>
+        <skipPmdCheck>false</skipPmdCheck>
+        <skipFindBugs>false</skipFindBugs>
+        <skipJacoco>false</skipJacoco>
+        <skywalking.version>8.9.0</skywalking.version>
     </properties>
 
     <modules>
@@ -229,6 +239,26 @@
                 <version>${mybatis-plus.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring-cloud-alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+                <exclusions>
+                    <exclusion>
+                        <groupId>io.seata</groupId>
+                        <artifactId>seata-spring-boot-starter</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>io.seata</groupId>
+                <artifactId>seata-spring-boot-starter</artifactId>
+                <version>${seata.version}</version>
+            </dependency>
+
 
 
             <dependency>
@@ -258,6 +288,18 @@
             <dependency>
                 <groupId>com.ihankun.core.log</groupId>
                 <artifactId>log</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.ihankun.core.spring.api</groupId>
+                <artifactId>spring-api</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.ihankun.core.spring.server</groupId>
+                <artifactId>spring-server</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
         </dependencies>

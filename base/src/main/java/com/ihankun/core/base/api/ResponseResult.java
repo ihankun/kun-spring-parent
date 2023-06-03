@@ -63,24 +63,7 @@ public class ResponseResult<T> implements Serializable {
      * 构建错误信息
      */
     private static <T> ResponseResult build(IErrorCode code, T data, String[] params) {
-        ResponseResult result = new ResponseResult();
-        result.setSuccess(code.getCode().equals(BaseErrorCode.SUCCESS.getCode()) ? Boolean.TRUE : Boolean.FALSE);
-        if (StringUtils.isEmpty(code.prefix())) {
-            result.setCode(code.getCode());
-        } else {
-            result.setCode(code.prefix() + CODE_SPLIT + code.getCode());
-        }
-        String msg = code.getMsg();
-        //如果包含占位符
-        if (msg.contains(REPLACE_STR) && params != null && params.length > 0) {
-            for (int i = 0; i < params.length; i++) {
-                String param = params[i];
-                msg = msg.replaceAll("\\$" + (i + 1), param);
-            }
-        }
-        result.setMessage(msg);
-        result.setData(data);
-        return result;
+        return build(code, null, ResponseLevelEnum.INFO, data, params);
     }
 
     /**
@@ -208,6 +191,13 @@ public class ResponseResult<T> implements Serializable {
      */
     public static <T> ResponseResult<T> error(T data, IErrorCode code, String... params) {
         return build(code, data, params);
+    }
+
+    /**
+     * 获取失败的结果
+     */
+    public static <T> ResponseResult<T> error(IErrorCode code, String service, ResponseLevelEnum level, String... params) {
+        return build(code, null, params);
     }
 
 
