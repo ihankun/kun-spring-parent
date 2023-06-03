@@ -1,5 +1,8 @@
 package com.ihankun.core.spring.api.validator.enums;
 
+/**
+ * @author hankun
+ */
 public enum CaseMode {
 
     /**

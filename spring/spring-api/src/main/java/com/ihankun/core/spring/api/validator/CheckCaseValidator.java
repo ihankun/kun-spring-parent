@@ -6,6 +6,9 @@ import com.ihankun.core.spring.api.validator.enums.CaseMode;
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
+/**
+ * @author hankun
+ */
 public class CheckCaseValidator implements ConstraintValidator<CheckCase, String> {
 
     /**

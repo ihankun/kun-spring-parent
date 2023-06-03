@@ -4,6 +4,9 @@ import lombok.Data;
 
 import java.io.Serializable;
 
+/**
+ * @author hankun
+ */
 @Data
 public class ApiInfo implements Serializable {
 

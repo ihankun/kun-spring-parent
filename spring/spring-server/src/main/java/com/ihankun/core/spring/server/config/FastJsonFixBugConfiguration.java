@@ -6,6 +6,9 @@ import com.alibaba.fastjson.serializer.SerializerFeature;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * @author hankun
+ */
 @Slf4j
 @Configuration
 public class FastJsonFixBugConfiguration {

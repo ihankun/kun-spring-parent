@@ -3,6 +3,9 @@ package com.ihankun.core.spring.server.convert;
 import com.github.pagehelper.PageInfo;
 import com.ihankun.core.base.api.BasePageVO;
 
+/**
+ * @author hankun
+ */
 public class PageInfoToVoUtils {
     /**
      * 转换

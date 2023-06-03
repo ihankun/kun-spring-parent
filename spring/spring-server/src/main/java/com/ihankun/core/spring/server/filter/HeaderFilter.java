@@ -18,6 +18,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Base64;
 
+/**
+ * @author hankun
+ */
 @Configuration
 @Slf4j
 @Order(value = Ordered.HIGHEST_PRECEDENCE)

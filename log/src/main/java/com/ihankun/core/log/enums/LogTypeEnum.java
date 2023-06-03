@@ -2,6 +2,9 @@ package com.ihankun.core.log.enums;
 
 import lombok.Getter;
 
+/**
+ * @author hankun
+ */
 @Getter
 public enum LogTypeEnum {
     /**

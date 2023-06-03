@@ -17,6 +17,9 @@ import org.springframework.context.annotation.Configuration;
 
 import java.util.Base64;
 
+/**
+ * @author hankun
+ */
 @Configuration
 @ConditionalOnClass(FeignClient.class)
 @Slf4j

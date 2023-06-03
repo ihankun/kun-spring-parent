@@ -10,6 +10,9 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * @author hankun
+ */
 public class DateConverterConfig extends StdDateFormat {
 
     private static final List<String> FORMATS = new ArrayList<>(4);

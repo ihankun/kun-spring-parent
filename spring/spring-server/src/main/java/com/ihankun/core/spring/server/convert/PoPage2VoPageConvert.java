@@ -7,6 +7,9 @@ import org.springframework.beans.BeanUtils;
 
 import java.util.List;
 
+/**
+ * @author hankun
+ */
 public interface PoPage2VoPageConvert<PO,VO> {
 
     /**

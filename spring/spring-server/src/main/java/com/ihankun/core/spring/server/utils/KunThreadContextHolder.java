@@ -9,6 +9,9 @@ import com.ihankun.core.log.entity.ApiLog;
 import io.seata.core.context.RootContext;
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * @author hankun
+ */
 @Slf4j
 public class KunThreadContextHolder {
 

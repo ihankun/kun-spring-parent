@@ -5,6 +5,9 @@ import org.mapstruct.InheritInverseConfiguration;
 
 import java.util.List;
 
+/**
+ * @author hankun
+ */
 public interface Source2TargetConvert<Source, Target> {
 
     /**

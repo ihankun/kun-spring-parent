@@ -5,6 +5,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.lang.annotation.*;
 
+/**
+ * @author hankun
+ */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 @Documented

@@ -5,6 +5,9 @@ import com.ihankun.core.base.id.IdGenerator;
 import com.ihankun.core.log.context.TraceLogContext;
 import org.apache.commons.lang3.StringUtils;
 
+/**
+ * @author hankun
+ */
 public interface TraceLogConstant {
     /**
      * tracceId

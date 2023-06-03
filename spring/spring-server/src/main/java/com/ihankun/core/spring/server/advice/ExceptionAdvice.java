@@ -28,6 +28,9 @@ import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.Set;
 
+/**
+ * @author hankun
+ */
 @Slf4j
 @ConditionalOnProperty(prefix = "project.separate", value = {"enable"}, havingValue = "true", matchIfMissing = true)
 @RestControllerAdvice
