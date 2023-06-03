@@ -57,6 +57,18 @@ public class BusinessException extends RuntimeException{
     }
 
     /**
+     * 构造业务异常
+     *
+     * @param prefix  异常前缀
+     * @param code    异常编码
+     * @param message 异常信息
+     * @return
+     */
+    public static BusinessException build(String prefix, String code, String message) {
+        return new BusinessException(prefix, code, message);
+    }
+
+    /**
      * 处理消息
      *
      * @param msg
@@ -78,6 +90,18 @@ public class BusinessException extends RuntimeException{
             log.error("invoke executeMsg error", e);
             return msg;
         }
+    }
+
+    /**
+     * 根据错误code、错误信息构造业务异常
+     *
+     * @param code    业务code
+     * @param message 错误信息
+     */
+    protected BusinessException(String prefix, String code, String message) {
+        super(executeMsg(message, null));
+        this.prefix = prefix;
+        this.code = code;
     }
 
     /**

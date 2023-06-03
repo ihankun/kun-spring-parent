@@ -12,7 +12,6 @@ import javax.annotation.PostConstruct;
  */
 @Slf4j
 @Configuration
-@ConfigurationProperties(prefix = "kun.db")
 @ComponentScan(basePackageClasses = DbAutoConfiguration.class)
 public class DbAutoConfiguration {
 

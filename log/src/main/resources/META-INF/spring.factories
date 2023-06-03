@@ -1,2 +1,2 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  com.ihankun.core.log.LogAutoConfiguration
+org.springframework.boot.env.EnvironmentPostProcessor=com.ihankun.core.log.config.Log4j2EnvironmentPostProcessor
+org.springframework.context.ApplicationContextInitializer=com.ihankun.core.log.config.SpringEnvironmentLookup

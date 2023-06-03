@@ -25,12 +25,30 @@
         <spring-boot.version>2.7.6</spring-boot.version>
         <!-- spring cloud 版本 -->
         <spring-cloud.version>Hoxton.SR3</spring-cloud.version>
+        <!--直接引入一个自定义的空的logback-->
+        <logback.version>1.0-empty-SNAPSHOT</logback.version>
+        <log4j2.version>2.16.0</log4j2.version>
 
         <lombok.version>1.18.22</lombok.version>
         <fastjson.version>1.2.72</fastjson.version>
         <swagger-bootstrap-ui.version>1.7.2</swagger-bootstrap-ui.version>
         <springfox-swagger.version>2.8.0</springfox-swagger.version>
         <hutool-all.version>5.7.22</hutool-all.version>
+
+        <mybatis.version>1.3.2</mybatis.version>
+        <mybatis-plus.version>3.2.0</mybatis-plus.version>
+        <pagehelper.version>5.3.1</pagehelper.version>
+        <mapstruct.version>1.3.0.Final</mapstruct.version>
+
+        <swagger.version>2.9.2</swagger.version>
+        <swagger.bootstrap.ui.version>2.0.2</swagger.bootstrap.ui.version>
+        <seata.version>1.4.2</seata.version>
+        <!--springcloud-alibaba 版本-->
+        <spring-cloud-alibaba.version>2.2.1.RELEASE</spring-cloud-alibaba.version>
+        <skipPmdCheck>false</skipPmdCheck>
+        <skipFindBugs>false</skipFindBugs>
+        <skipJacoco>false</skipJacoco>
+        <skywalking.version>8.9.0</skywalking.version>
     </properties>
 
     <modules>
@@ -130,6 +148,35 @@
             <version>3.1.5</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${commons-lang3.version}</version>
+        </dependency>
+
+        <!--传统属性注入支持-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <version>${spring-boot.version}</version>
+        </dependency>
+        <!--
+        springboot默认使用logback，所以想使用springboot+log4j，就需要全局排除掉springboot中默认的logback.全局排除spring-boot-starter-logging的依赖。
+        把spring-boot-starter-logging写成独立的dependency，然后用exclusion排除其中的所有依赖，就等于没有依赖spring-boot-starter-logging了
+        还需要配合引入一个自定义的空的logback实现，见上方
+        <logback.version>1.0-empty-SNAPSHOT</logback.version>
+        -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-logging</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>*</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
     </dependencies>
 
     <dependencyManagement>
@@ -141,6 +188,78 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>1.1.22</version>
+            </dependency>
+
+            <!--分页插件-->
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper</artifactId>
+                <version>${pagehelper.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper-spring-boot-starter</artifactId>
+                <version>1.2.5</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.mybatis</groupId>
+                        <artifactId>mybatis</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.mybatis</groupId>
+                        <artifactId>mybatis-spring</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct</artifactId>
+                <version>${mapstruct.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct-processor</artifactId>
+                <version>${mapstruct.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis.version}</version>
+            </dependency>
+            <!--mybatis plus-->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring-cloud-alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+                <exclusions>
+                    <exclusion>
+                        <groupId>io.seata</groupId>
+                        <artifactId>seata-spring-boot-starter</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>io.seata</groupId>
+                <artifactId>seata-spring-boot-starter</artifactId>
+                <version>${seata.version}</version>
+            </dependency>
+
+
 
             <dependency>
                 <groupId>com.ihankun.core.commons</groupId>
@@ -163,6 +282,24 @@
             <dependency>
                 <groupId>com.ihankun.core.db</groupId>
                 <artifactId>db</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.ihankun.core.log</groupId>
+                <artifactId>log</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.ihankun.core.spring.api</groupId>
+                <artifactId>spring-api</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.ihankun.core.spring.server</groupId>
+                <artifactId>spring-server</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
         </dependencies>

@@ -1,6 +1,7 @@
 package com.ihankun.core.base.api;
 
 import com.alibaba.fastjson.JSON;
+import com.ihankun.core.base.enums.ResponseLevelEnum;
 import com.ihankun.core.base.error.BaseErrorCode;
 import com.ihankun.core.base.error.IErrorCode;
 import com.ihankun.core.base.exception.BusinessException;
@@ -40,6 +41,12 @@ public class ResponseResult<T> implements Serializable {
     @ApiModelProperty("异常名称")
     private String exceptionName;
 
+    @ApiModelProperty("级别，正常返回为info,业务异常为warn,未捕获异常为error")
+    private String level;
+
+    @ApiModelProperty("当前服务")
+    private String service;
+
     private static final String REPLACE_STR = "$";
     private static final String CODE_SPLIT = "@";
     private static final String NO_PASS = "1";
@@ -56,6 +63,13 @@ public class ResponseResult<T> implements Serializable {
      * 构建错误信息
      */
     private static <T> ResponseResult build(IErrorCode code, T data, String[] params) {
+        return build(code, null, ResponseLevelEnum.INFO, data, params);
+    }
+
+    /**
+     * 构建返回消息
+     */
+    private static <T> ResponseResult build(IErrorCode code, String service, ResponseLevelEnum level, T data, String[] params) {
         ResponseResult result = new ResponseResult();
         result.setSuccess(code.getCode().equals(BaseErrorCode.SUCCESS.getCode()) ? Boolean.TRUE : Boolean.FALSE);
         if (StringUtils.isEmpty(code.prefix())) {
@@ -71,6 +85,8 @@ public class ResponseResult<T> implements Serializable {
                 msg = msg.replaceAll("\\$" + (i + 1), param);
             }
         }
+        result.setService(service);
+        result.setLevel(level.name().toLowerCase());
         result.setMessage(msg);
         result.setData(data);
         return result;
@@ -175,6 +191,13 @@ public class ResponseResult<T> implements Serializable {
      */
     public static <T> ResponseResult<T> error(T data, IErrorCode code, String... params) {
         return build(code, data, params);
+    }
+
+    /**
+     * 获取失败的结果
+     */
+    public static <T> ResponseResult<T> error(IErrorCode code, String service, ResponseLevelEnum level, String... params) {
+        return build(code, null, params);
     }
 
 

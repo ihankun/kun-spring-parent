@@ -22,4 +22,33 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.ihankun.core.commons</groupId>
+            <artifactId>commons</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.ihankun.core.base</groupId>
+            <artifactId>base</artifactId>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+        <!--Log4j2的场景启动器-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-log4j2</artifactId>
+        </dependency>
+        <!--异步日志依赖 -->
+        <dependency>
+            <groupId>com.lmax</groupId>
+            <artifactId>disruptor</artifactId>
+            <version>3.4.2</version>
+        </dependency>
+    </dependencies>
+
 </project>

@@ -22,4 +22,34 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.ihankun.core.commons</groupId>
+            <artifactId>commons</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.ihankun.core.base</groupId>
+            <artifactId>base</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.redisson</groupId>
+            <artifactId>redisson-spring-boot-starter</artifactId>
+            <version>3.17.1</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.redisson</groupId>
+                    <artifactId>redisson-spring-data-26</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>org.redisson</groupId>
+            <artifactId>redisson-spring-data-22</artifactId>
+            <version>3.17.1</version>
+        </dependency>
+    </dependencies>
+
 </project>
