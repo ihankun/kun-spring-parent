@@ -19,6 +19,9 @@ import java.util.Properties;
 import java.util.concurrent.Future;
 import java.util.concurrent.atomic.AtomicInteger;
 
+/**
+ * @author hankun
+ */
 @Slf4j
 public class KafkaMqProducer implements MqProducer {
     KafkaProducer<String, String> producer;

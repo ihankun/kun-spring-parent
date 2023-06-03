@@ -8,6 +8,9 @@ import org.apache.rocketmq.client.consumer.DefaultMQPushConsumer;
 import org.apache.rocketmq.common.UtilAll;
 import org.apache.rocketmq.remoting.RPCHook;
 
+/**
+ * @author hankun
+ */
 @Slf4j
 public class KunMqPushConsumer extends DefaultMQPushConsumer {
 

@@ -8,6 +8,9 @@ import lombok.Data;
 
 import java.io.Serializable;
 
+/**
+ * @author hankun
+ */
 @Data
 public class KunMqMsg implements Serializable {
 

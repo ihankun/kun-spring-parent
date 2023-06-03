@@ -7,6 +7,9 @@ import org.springframework.context.annotation.Configuration;
 import java.util.Map;
 import java.util.Set;
 
+/**
+ * @author hankun
+ */
 @Data
 @Configuration
 @ConfigurationProperties(prefix = "ihankun.mq.rule")

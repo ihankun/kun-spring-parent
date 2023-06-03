@@ -24,6 +24,9 @@ import javax.annotation.PostConstruct;
 import java.time.Duration;
 import java.util.*;
 
+/**
+ * @author hankun
+ */
 @Component("kafkaConsumer")
 @Slf4j
 public class KafkaMqConsumer extends AbstractConsumer implements MqConsumer {

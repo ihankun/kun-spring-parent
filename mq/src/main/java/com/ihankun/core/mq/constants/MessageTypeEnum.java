@@ -3,6 +3,9 @@ package com.ihankun.core.mq.constants;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
+/**
+ * @author hankun
+ */
 @Getter
 @AllArgsConstructor
 public enum MessageTypeEnum {

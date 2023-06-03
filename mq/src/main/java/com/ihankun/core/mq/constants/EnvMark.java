@@ -1,5 +1,8 @@
 package com.ihankun.core.mq.constants;
 
+/**
+ * @author hankun
+ */
 public enum EnvMark {
 
     PROD("prod", "生产环境"),

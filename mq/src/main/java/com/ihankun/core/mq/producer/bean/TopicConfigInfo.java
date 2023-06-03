@@ -4,6 +4,9 @@ import com.google.common.base.Objects;
 
 import java.util.List;
 
+/**
+ * @author hankun
+ */
 public class TopicConfigInfo {
 
     private List<String> clusterNameList;

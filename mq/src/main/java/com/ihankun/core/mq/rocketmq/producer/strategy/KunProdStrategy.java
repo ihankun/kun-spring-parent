@@ -10,6 +10,9 @@ import org.apache.rocketmq.logging.InternalLogger;
 
 import java.util.List;
 
+/**
+ * @author hankun
+ */
 public class KunProdStrategy extends MQFaultStrategy {
 
     private final static InternalLogger LOG = ClientLogger.getLog();

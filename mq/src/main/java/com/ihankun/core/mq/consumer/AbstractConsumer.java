@@ -12,6 +12,9 @@ import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * @author hankun
+ */
 @Slf4j
 public abstract class AbstractConsumer {
 

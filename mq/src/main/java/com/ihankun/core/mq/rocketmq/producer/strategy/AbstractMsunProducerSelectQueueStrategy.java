@@ -10,6 +10,9 @@ import org.apache.rocketmq.logging.InternalLogger;
 
 import java.util.List;
 
+/**
+ * @author hankun
+ */
 public abstract class AbstractMsunProducerSelectQueueStrategy extends MQFaultStrategy {
 
     private final static InternalLogger LOG = ClientLogger.getLog();
@@ -22,6 +25,7 @@ public abstract class AbstractMsunProducerSelectQueueStrategy extends MQFaultStr
      * @param lastBrokerName
      * @return
      */
+    @Override
     public abstract MessageQueue selectOneMessageQueue(TopicPublishInfo tpInfo, String lastBrokerName);
 
     /**

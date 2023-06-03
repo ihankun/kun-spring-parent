@@ -4,6 +4,9 @@ import com.ihankun.core.mq.config.MqProperties;
 
 import java.util.List;
 
+/**
+ * @author hankun
+ */
 public interface MqConsumer {
 
     /**

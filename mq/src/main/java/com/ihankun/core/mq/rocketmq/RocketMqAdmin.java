@@ -17,6 +17,9 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 
+/**
+ * @author hankun
+ */
 @Slf4j
 public class RocketMqAdmin {
 

@@ -19,6 +19,9 @@ import org.apache.rocketmq.remoting.exception.RemotingException;
 
 import java.util.Optional;
 
+/**
+ * @author hankun
+ */
 public class KunMqProducer extends DefaultMQProducer {
 
     private final InternalLogger log = ClientLogger.getLog();

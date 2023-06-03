@@ -49,6 +49,9 @@ import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 
+/**
+ * @author hankun
+ */
 @Slf4j
 public class RocketMqProducer implements MqProducer {
 

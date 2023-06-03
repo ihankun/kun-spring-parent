@@ -11,6 +11,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * @author hankun
+ */
 public class KunAllocateMessageQueueStrategy implements AllocateMessageQueueStrategy {
 
     private final InternalLogger log = ClientLogger.getLog();

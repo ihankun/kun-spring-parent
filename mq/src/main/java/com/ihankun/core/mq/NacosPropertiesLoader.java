@@ -14,6 +14,9 @@ import java.net.NetworkInterface;
 import java.net.SocketException;
 import java.util.*;
 
+/**
+ * @author hankun
+ */
 @Component
 @Slf4j
 public class NacosPropertiesLoader {

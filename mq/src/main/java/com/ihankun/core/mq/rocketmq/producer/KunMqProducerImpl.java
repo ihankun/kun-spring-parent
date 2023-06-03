@@ -7,6 +7,9 @@ import org.apache.rocketmq.client.producer.DefaultMQProducer;
 import org.apache.rocketmq.common.message.MessageQueue;
 import org.apache.rocketmq.remoting.RPCHook;
 
+/**
+ * @author hankun
+ */
 public class KunMqProducerImpl extends DefaultMQProducerImpl {
 
     private MQFaultStrategy mqFaultStrategy;

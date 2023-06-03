@@ -4,6 +4,9 @@ import com.ihankun.core.mq.message.KunReceiveMessage;
 
 import java.util.List;
 
+/**
+ * @author hankun
+ */
 public interface ConsumerListener<T> {
 
     /**

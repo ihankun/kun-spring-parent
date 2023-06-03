@@ -9,6 +9,9 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * @author hankun
+ */
 @Slf4j
 public class GrayMark {
 

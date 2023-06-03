@@ -2,6 +2,9 @@ package com.ihankun.core.mq.producer;
 
 import com.ihankun.core.mq.constants.KunMqSendResult;
 
+/**
+ * @author hankun
+ */
 public interface KunMqSendCallback {
 
     /**

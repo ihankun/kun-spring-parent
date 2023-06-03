@@ -3,6 +3,9 @@ package com.ihankun.core.mq.message;
 import com.ihankun.core.mq.producer.KunTopic;
 import lombok.Data;
 
+/**
+ * @author hankun
+ */
 @Data
 public class KunReceiveMessage<T> {
 

@@ -44,6 +44,9 @@ import javax.annotation.PostConstruct;
 import java.nio.charset.Charset;
 import java.util.*;
 
+/**
+ * @author hankun
+ */
 @Component("rocketmqConsumer")
 @Slf4j
 public class RocketMqConsumer extends AbstractConsumer implements MqConsumer {

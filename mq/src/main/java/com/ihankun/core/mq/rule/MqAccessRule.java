@@ -8,6 +8,9 @@ import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
 
+/**
+ * @author hankun
+ */
 @Slf4j
 @Component
 @ConditionalOnBean(value = MqRuleProperties.class)

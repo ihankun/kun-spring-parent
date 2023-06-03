@@ -6,6 +6,9 @@ import org.apache.rocketmq.common.message.MessageQueue;
 
 import java.util.List;
 
+/**
+ * @author hankun
+ */
 public class GgrayKunProducerSelectQueueStrategy extends AbstractMsunProducerSelectQueueStrategy {
 
     private int graySize;

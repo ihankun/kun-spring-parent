@@ -2,6 +2,9 @@ package com.ihankun.core.mq.config;
 
 import lombok.Getter;
 
+/**
+ * @author hankun
+ */
 @Getter
 public enum ServiceState {
 

@@ -5,6 +5,9 @@ import com.ihankun.core.mq.constants.KunMqSendResult;
 
 import java.util.List;
 
+/**
+ * @author hankun
+ */
 public interface MqProducer {
 
     /**
