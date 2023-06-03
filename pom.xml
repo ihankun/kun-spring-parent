@@ -26,7 +26,7 @@
         <!-- spring cloud 版本 -->
         <spring-cloud.version>Hoxton.SR3</spring-cloud.version>
         <!--直接引入一个自定义的空的logback-->
-        <logback.version>1.0-empty-SNAPSHOT</logback.version>
+<!--        <logback.version>1.0-empty-SNAPSHOT</logback.version>-->
         <log4j2.version>2.16.0</log4j2.version>
 
         <lombok.version>1.18.22</lombok.version>
@@ -298,12 +298,6 @@
             </dependency>
 
             <dependency>
-                <groupId>com.ihankun.core.spring.server</groupId>
-                <artifactId>spring-server</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
-            </dependency>
-
-            <dependency>
                 <groupId>com.ihankun.core.job</groupId>
                 <artifactId>job</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
@@ -312,6 +306,24 @@
             <dependency>
                 <groupId>com.ihankun.core.cache</groupId>
                 <artifactId>cache</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.ihankun.core.lock</groupId>
+                <artifactId>lock</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.ihankun.core.nosql.redis</groupId>
+                <artifactId>redis</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.ihankun.core.mq</groupId>
+                <artifactId>mq</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
         </dependencies>

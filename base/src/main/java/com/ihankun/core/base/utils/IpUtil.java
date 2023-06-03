@@ -18,7 +18,7 @@ import java.util.Enumeration;
  */
 @Slf4j
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
-public class IpUtil {
+public final class IpUtil {
 
     /**
      * IP地址的正则表达式.
