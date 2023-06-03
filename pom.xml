@@ -302,6 +302,18 @@
                 <artifactId>spring-server</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
+
+            <dependency>
+                <groupId>com.ihankun.core.job</groupId>
+                <artifactId>job</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.ihankun.core.cache</groupId>
+                <artifactId>cache</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

@@ -16,7 +16,7 @@ import org.springframework.core.Ordered;
 @AutoConfigureOrder(value = Ordered.HIGHEST_PRECEDENCE)
 public class SpringHelpers implements ApplicationContextAware {
 
-    public static ApplicationContext context;
+    static ApplicationContext context;
 
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
