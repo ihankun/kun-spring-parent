@@ -1,9 +1,12 @@
-package com.ihankun.core.db.event;
+package com.ihankun.core.db.events;
 
 import com.ihankun.core.base.context.DomainContext;
 import lombok.Getter;
 import org.springframework.context.ApplicationEvent;
 
+/**
+ * @author hankun
+ */
 @Getter
 public class SqlExecEvent extends ApplicationEvent {
     private final String sqlId;

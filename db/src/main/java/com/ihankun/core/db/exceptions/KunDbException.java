@@ -1,5 +1,8 @@
 package com.ihankun.core.db.exceptions;
 
+/**
+ * @author hankun
+ */
 public class KunDbException extends RuntimeException{
 
     public KunDbException(String message) {

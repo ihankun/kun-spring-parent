@@ -4,6 +4,9 @@ import com.ihankun.core.base.error.IErrorCode;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
+/**
+ * @author hankun
+ */
 @Getter
 @AllArgsConstructor
 public enum CommonDbErrorCode implements IErrorCode {
