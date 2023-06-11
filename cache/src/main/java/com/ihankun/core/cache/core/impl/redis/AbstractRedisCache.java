@@ -5,7 +5,7 @@ import com.ihankun.core.base.exception.BusinessException;
 import com.ihankun.core.cache.RedisDataType;
 import com.ihankun.core.cache.config.RedisSizeCheckProperties;
 import com.ihankun.core.cache.key.CacheKey;
-import com.ihankun.core.commons.utils.SpringHelpers;
+import com.ihankun.core.base.utils.SpringHelpers;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.util.CollectionUtils;

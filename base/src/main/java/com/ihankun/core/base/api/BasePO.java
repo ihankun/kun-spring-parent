@@ -19,6 +19,11 @@ import java.util.Date;
 public class BasePO extends BaseEntity{
 
     /**
+     * 机构id列名
+     */
+    public static final String ORG_ID = "org_id";
+
+    /**
      * 默认id
      */
     public static final Long DEFAULT_ID = 0L;
@@ -27,6 +32,11 @@ public class BasePO extends BaseEntity{
      * 默认用户名称
      */
     private static final String DEFAULT_USER_NAME = "管理员";
+
+    /**
+     * 机构id
+     */
+    public Long orgId;
 
     /**
      * 创建人id
@@ -50,11 +60,6 @@ public class BasePO extends BaseEntity{
      * 更新人id
      */
     public Long sysUpdaterId;
-
-    /**
-     * 更新人名称
-     */
-    public String sysUpdaterName;
 
     /**
      * 更新时间
@@ -89,6 +94,7 @@ public class BasePO extends BaseEntity{
             loginUserInfo = new LoginUserInfo();
             loginUserInfo.setUserId(DEFAULT_ID);
             loginUserInfo.setUserName(DEFAULT_USER_NAME);
+            loginUserInfo.setOrgId(DEFAULT_ID);
         }
         return loginUserInfo;
     }
@@ -106,6 +112,21 @@ public class BasePO extends BaseEntity{
         this.sysCreaterName = userName;
         this.version = 0;
         update();
+        autoSetOrgId();
+    }
+
+    /**
+     * 自动设置机构id
+     */
+    private void autoSetOrgId() {
+        LoginUserInfo loginUser = getLoginUser();
+        if (getOrgId() == null) {
+            if (loginUser.getOrgId() != null) {
+                this.orgId = loginUser.getOrgId();
+                return;
+            }
+            this.orgId = DEFAULT_ID;
+        }
     }
 
 }

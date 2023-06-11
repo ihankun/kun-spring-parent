@@ -12,7 +12,7 @@ import javax.annotation.PostConstruct;
  */
 @Slf4j
 @Configuration
-@ConfigurationProperties(prefix = "kun.job")
+@ConfigurationProperties(prefix = "ihankun.job")
 @ComponentScan(basePackageClasses = JobAutoConfiguration.class)
 public class JobAutoConfiguration {
 

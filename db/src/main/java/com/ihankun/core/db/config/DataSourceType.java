@@ -18,5 +18,10 @@ public class DataSourceType {
     /**
      * 字典中心数据源
      */
-    public static final String DICT = "dict";
+    public static final String DICT = "comm";
+
+    /**
+     * 应用数据源
+     */
+    public static final String APP = "app";
 }

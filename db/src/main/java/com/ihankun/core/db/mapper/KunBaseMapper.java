@@ -26,6 +26,9 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * @author hankun
+ */
 public interface KunBaseMapper<T extends BasePO> extends BaseMapper<T> {
 
     Pattern PATTERN = Pattern.compile("[A-Z]");

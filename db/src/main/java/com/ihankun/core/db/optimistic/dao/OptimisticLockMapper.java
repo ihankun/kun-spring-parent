@@ -5,6 +5,9 @@ import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Update;
 import org.springframework.stereotype.Repository;
 
+/**
+ * @author hankun
+ */
 @Repository
 public interface OptimisticLockMapper extends BaseMapper {
 
