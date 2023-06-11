@@ -1,1 +1,2 @@
-
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.ihankun.core.commons.CommonsAutoConfiguration
