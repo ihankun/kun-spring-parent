@@ -1,4 +1,4 @@
-package com.ihankun.core.base.id;
+package com.ihankun.core.commons.id;
 
 import lombok.extern.slf4j.Slf4j;
 

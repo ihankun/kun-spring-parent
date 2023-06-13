@@ -6,7 +6,7 @@ import com.ihankun.core.base.context.DomainContext;
 import com.ihankun.core.base.context.GrayContext;
 import com.ihankun.core.base.context.LoginUserContext;
 import com.ihankun.core.base.context.LoginUserInfo;
-import com.ihankun.core.base.id.IdGenerator;
+import com.ihankun.core.commons.id.IdGenerator;
 import com.ihankun.core.job.dataflow.domain.JobDomainItem;
 import com.ihankun.core.log.context.TraceLogContext;
 import lombok.extern.slf4j.Slf4j;

@@ -2,7 +2,7 @@ package com.ihankun.core.spring.server.filter;
 
 import com.alibaba.fastjson.JSON;
 import com.ihankun.core.base.context.*;
-import com.ihankun.core.base.id.IdGenerator;
+import com.ihankun.core.commons.id.IdGenerator;
 import com.ihankun.core.log.context.TraceLogContext;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;

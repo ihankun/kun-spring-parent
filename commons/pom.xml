@@ -22,5 +22,12 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.ihankun.core.base</groupId>
+            <artifactId>base</artifactId>
+        </dependency>
+    </dependencies>
+
 
 </project>

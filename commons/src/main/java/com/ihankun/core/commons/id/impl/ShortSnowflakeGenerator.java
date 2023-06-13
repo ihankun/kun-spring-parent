@@ -1,6 +1,6 @@
-package com.ihankun.core.base.id.impl;
+package com.ihankun.core.commons.id.impl;
 
-import com.ihankun.core.base.id.IdGeneratorInterface;
+import com.ihankun.core.commons.id.IdGeneratorInterface;
 
 import java.lang.management.ManagementFactory;
 import java.net.InetAddress;
