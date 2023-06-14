@@ -1,4 +1,4 @@
-package com.ihankun.core.base.id;
+package com.ihankun.core.commons.id;
 
 import cn.hutool.core.util.RandomUtil;
 import com.ihankun.core.base.utils.DateUtils;

@@ -1,7 +1,7 @@
 package com.ihankun.core.db.sql;
 
 import com.baomidou.mybatisplus.core.toolkit.PluginUtils;
-import com.ihankun.core.base.id.IdGenerator;
+import com.ihankun.core.commons.id.IdGenerator;
 import com.ihankun.core.db.events.SqlExecEvent;
 import com.ihankun.core.db.exceptions.KunSqlFlowControlException;
 import lombok.NonNull;

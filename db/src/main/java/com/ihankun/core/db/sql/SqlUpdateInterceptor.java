@@ -27,7 +27,7 @@ import java.util.Properties;
         @Signature(type = StatementHandler.class, method = "prepare", args = {Connection.class, Integer.class})
 })
 public class SqlUpdateInterceptor implements Interceptor {
-    public static final String UPDATE_TIME = "his_update_time";
+    public static final String UPDATE_TIME = "sys_update_time";
 
     @Resource
     private KunDbConfig config;

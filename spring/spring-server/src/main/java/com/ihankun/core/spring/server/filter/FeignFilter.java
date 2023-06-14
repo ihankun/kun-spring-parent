@@ -1,7 +1,7 @@
 package com.ihankun.core.spring.server.filter;
 
 import com.ihankun.core.base.context.*;
-import com.ihankun.core.base.id.IdGenerator;
+import com.ihankun.core.commons.id.IdGenerator;
 import com.ihankun.core.log.context.TraceLogApiInfoContext;
 import com.ihankun.core.log.context.TraceLogContext;
 import com.ihankun.core.log.entity.ApiInfo;

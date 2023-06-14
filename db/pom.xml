@@ -28,6 +28,11 @@
             <artifactId>base</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.ihankun.core.commons</groupId>
+            <artifactId>commons</artifactId>
+        </dependency>
+
         <!--驱动-->
         <dependency>
             <groupId>org.postgresql</groupId>
