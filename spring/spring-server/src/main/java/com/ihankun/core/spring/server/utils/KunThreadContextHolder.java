@@ -33,7 +33,7 @@ public class KunThreadContextHolder {
         KunThreadContextHolder holder = new KunThreadContextHolder();
         holder.loginUserInfo = LoginUserContext.getLoginUserInfo();
         holder.domain = DomainContext.get();
-        holder.businessTime = BusinessStartTimeContext.getTimeStr();
+        holder.businessTime = BusinessStartTimeContext.get();
         holder.gray = GrayContext.get();
         holder.traceId = TraceLogContext.get();
         holder.xid = RootContext.getXID();

@@ -1,6 +1,6 @@
 package com.ihankun.core.mq.rocketmq.consumer;
 
-import com.ihankun.core.base.utils.IpUtil;
+import com.ihankun.core.commons.utils.IpUtil;
 import com.ihankun.core.mq.constants.EnvMark;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.rocketmq.client.consumer.AllocateMessageQueueStrategy;

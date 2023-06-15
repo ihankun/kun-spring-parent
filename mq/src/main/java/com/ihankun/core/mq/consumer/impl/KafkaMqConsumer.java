@@ -2,7 +2,7 @@ package com.ihankun.core.mq.consumer.impl;
 
 import com.alibaba.fastjson.JSON;
 import com.ihankun.core.base.thread.NamedThreadFactory;
-import com.ihankun.core.base.utils.SpringHelpers;
+import com.ihankun.core.base.help.SpringHelpers;
 import com.ihankun.core.mq.config.MqProperties;
 import com.ihankun.core.mq.consumer.AbstractConsumer;
 import com.ihankun.core.mq.consumer.ConsumerListener;

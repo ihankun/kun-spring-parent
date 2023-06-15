@@ -1,6 +1,6 @@
 package com.ihankun.core.base.api;
 
-import com.ihankun.core.base.utils.LogFormat;
+import com.ihankun.core.base.help.LogFormat;
 import lombok.extern.apachecommons.CommonsLog;
 
 import java.io.IOException;

@@ -1,6 +1,6 @@
 package com.ihankun.core.spring.server.advice;
 
-import com.ihankun.core.base.api.ResponseResult;
+import com.ihankun.core.base.response.ResponseResult;
 import com.ihankun.core.base.context.*;
 import com.ihankun.core.base.enums.ResponseLevelEnum;
 import com.ihankun.core.base.error.IErrorCode;
@@ -189,7 +189,7 @@ public class ExceptionAdvice {
             log.info("MsunHandlerExceptionResolvers.doResolveException.clear.domain,domain={}", domain);
         }
 
-        String timeStr = BusinessStartTimeContext.getTimeStr();
+        String timeStr = BusinessStartTimeContext.get();
         if (!StringUtils.isEmpty(timeStr)) {
             BusinessStartTimeContext.clear();
             log.info("MsunHandlerExceptionResolvers.doResolveException.clear.time,timeStr={}", timeStr);
