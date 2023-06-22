@@ -1,6 +1,6 @@
 package com.ihankun.core.base.remote;
 
-import com.ihankun.core.base.api.ResponseResult;
+import com.ihankun.core.base.response.ResponseResult;
 import com.ihankun.core.base.error.CommonErrorCode;
 import com.ihankun.core.base.exception.BusinessException;
 

@@ -1,4 +1,4 @@
-package com.ihankun.core.base.utils;
+package com.ihankun.core.commons.utils;
 
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;

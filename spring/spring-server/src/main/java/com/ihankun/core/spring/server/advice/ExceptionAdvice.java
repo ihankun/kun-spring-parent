@@ -1,6 +1,6 @@
 package com.ihankun.core.spring.server.advice;
 
-import com.ihankun.core.base.api.ResponseResult;
+import com.ihankun.core.base.response.ResponseResult;
 import com.ihankun.core.base.context.*;
 import com.ihankun.core.base.enums.ResponseLevelEnum;
 import com.ihankun.core.base.error.IErrorCode;
@@ -175,7 +175,7 @@ public class ExceptionAdvice {
         String xid = request.getHeader(RootContext.KEY_XID);
         if (!StringUtils.isEmpty(xid)) {
             XidResource.cleanXid(xid);
-            log.info("MsunHandlerExceptionResolvers.doResolveException.clear.seata,xid={}", xid);
+            log.info("ExceptionAdvice.doResolveException.clear.seata,xid={}", xid);
         }
 
         LoginUserInfo userInfo = LoginUserContext.getLoginUserInfo();
@@ -186,25 +186,25 @@ public class ExceptionAdvice {
         String domain = DomainContext.get();
         if (!StringUtils.isEmpty(domain)) {
             DomainContext.clear();
-            log.info("MsunHandlerExceptionResolvers.doResolveException.clear.domain,domain={}", domain);
+            log.info("ExceptionAdvice.doResolveException.clear.domain,domain={}", domain);
         }
 
-        String timeStr = BusinessStartTimeContext.getTimeStr();
+        String timeStr = BusinessStartTimeContext.get();
         if (!StringUtils.isEmpty(timeStr)) {
             BusinessStartTimeContext.clear();
-            log.info("MsunHandlerExceptionResolvers.doResolveException.clear.time,timeStr={}", timeStr);
+            log.info("ExceptionAdvice.doResolveException.clear.time,timeStr={}", timeStr);
         }
 
         String traceId = TraceLogContext.get();
         if (!StringUtils.isEmpty(traceId)) {
             TraceLogContext.reset();
-            log.info("MsunHandlerExceptionResolvers.doResolveException.clear.trace,traceId={}", traceId);
+            log.info("ExceptionAdvice.doResolveException.clear.trace,traceId={}", traceId);
         }
 
         String gray = GrayContext.get();
         if (!StringUtils.isEmpty(gray)) {
             GrayContext.clear();
-            log.info("MsunHandlerExceptionResolvers.doResolveException.clear.gray,gray={}", gray);
+            log.info("ExceptionAdvice.doResolveException.clear.gray,gray={}", gray);
         }
     }
 

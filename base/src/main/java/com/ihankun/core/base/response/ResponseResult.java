@@ -1,4 +1,4 @@
-package com.ihankun.core.base.api;
+package com.ihankun.core.base.response;
 
 import com.alibaba.fastjson.JSON;
 import com.ihankun.core.base.enums.ResponseLevelEnum;

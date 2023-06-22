@@ -1,11 +1,9 @@
 package com.ihankun.core.base.context;
 
-import com.ihankun.core.base.utils.DateUtils;
+import com.ihankun.core.base.help.DateUtils;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.core.NamedThreadLocal;
-import org.springframework.util.StringUtils;
-
-import java.util.Date;
 
 /**
  * 业务开始时间
@@ -24,7 +22,7 @@ public class BusinessStartTimeContext {
     /**
      * 获取String类型
      */
-    public static String getTimeStr() {
+    public static String get() {
         String time = CONTEXT_HOLDER.get();
         if (StringUtils.isEmpty(time)) {
             time = DateUtils.getNowStr();
@@ -36,13 +34,13 @@ public class BusinessStartTimeContext {
     /**
      * 获取时间类型
      */
-    public static Date getTime() {
-        String time = getTimeStr();
-        if (!StringUtils.isEmpty(time)) {
-            return DateUtils.dateStrToDate(time);
-        }
-        return DateUtils.getNowDate();
-    }
+//    public static Date getTime() {
+//        String time = getTimeStr();
+//        if (!StringUtils.isEmpty(time)) {
+//            return DateUtils.dateStrToDate(time);
+//        }
+//        return DateUtils.getNowDate();
+//    }
 
     public static void clear() {
         CONTEXT_HOLDER.remove();

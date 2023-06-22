@@ -56,7 +56,7 @@ public class FeignFilter implements RequestInterceptor {
         }
 
         //从上下文中取出业务首次发生时间
-        String time = BusinessStartTimeContext.getTimeStr();
+        String time = BusinessStartTimeContext.get();
         if (!StringUtils.isEmpty(time)) {
             debug("FeignFilter.time.header.set,url={},time={}", url, time);
             time = encoder.encodeToString(time.getBytes());

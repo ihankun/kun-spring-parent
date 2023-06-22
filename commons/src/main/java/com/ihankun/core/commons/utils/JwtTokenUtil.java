@@ -1,4 +1,4 @@
-package com.ihankun.core.base.utils;
+package com.ihankun.core.commons.utils;
 
 import com.alibaba.fastjson.JSON;
 import com.ihankun.core.base.context.LoginUserInfo;

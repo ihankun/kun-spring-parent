@@ -1,7 +1,7 @@
 package com.ihankun.core.mq;
 
 import com.ihankun.core.base.thread.NamedThreadFactory;
-import com.ihankun.core.base.utils.SpringHelpers;
+import com.ihankun.core.base.help.SpringHelpers;
 import com.ihankun.core.mq.config.GrayMark;
 import com.ihankun.core.mq.config.MqProperties;
 import com.ihankun.core.mq.constants.MqTypeEnum;

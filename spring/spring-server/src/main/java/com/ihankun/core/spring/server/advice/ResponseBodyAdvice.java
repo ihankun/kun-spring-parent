@@ -1,6 +1,6 @@
 package com.ihankun.core.spring.server.advice;
 
-import com.ihankun.core.base.api.ResponseResult;
+import com.ihankun.core.base.response.ResponseResult;
 import com.ihankun.core.base.enums.ResponseLevelEnum;
 import com.ihankun.core.log.context.TraceLogContext;
 import com.ihankun.core.spring.server.error.AdviceErrorCode;

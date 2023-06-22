@@ -1,4 +1,4 @@
-package com.ihankun.core.base.utils;
+package com.ihankun.core.commons.utils;
 
 public class ServerStateUtil {
 

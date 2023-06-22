@@ -1,7 +1,7 @@
 package com.ihankun.core.commons.id;
 
 import cn.hutool.core.util.RandomUtil;
-import com.ihankun.core.base.utils.DateUtils;
+import com.ihankun.core.base.help.DateUtils;
 import lombok.extern.slf4j.Slf4j;
 
 /**
