@@ -501,6 +501,17 @@
 
     <repositories>
         <repository>
+            <id>ihankun-group</id>
+            <name>Nexus Repository</name>
+            <url>http://192.168.0.123:8081/repository/ihankun-group/</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+        <repository>
             <id>aliyun</id>
             <url>https://maven.aliyun.com/repository/public</url>
             <releases>
@@ -513,6 +524,17 @@
     </repositories>
     <pluginRepositories>
         <pluginRepository>
+            <id>ihankun-group</id>
+            <name>Nexus Plugin Repository</name>
+            <url>http://192.168.0.123:8081/repository/ihankun-group/</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </pluginRepository>
+        <pluginRepository>
             <id>aliyun-plugin</id>
             <url>https://maven.aliyun.com/repository/public</url>
             <releases>
@@ -523,6 +545,17 @@
             </snapshots>
         </pluginRepository>
     </pluginRepositories>
-
+    <distributionManagement>
+        <repository><!--部署项目产生的构件到远程仓库需要的信息 -->
+            <id>maven-ihankun-releases</id><!-- 此处id和settings.xml的id保持一致 -->
+            <name>Nexus Release Repository</name>
+            <url>http://192.168.0.123:8081/repository/maven-ihankun-releases/</url>
+        </repository>
+        <snapshotRepository><!--构件的快照部署到哪里？如果没有配置该元素，默认部署到repository元素配置的仓库，参见distributionManagement/repository元素 -->
+            <id>maven-ihankun-snapshot</id><!-- 此处id和settings.xml的id保持一致 -->
+            <name>Nexus Snapshot Repository</name>
+            <url>http://192.168.0.123:8081/repository/maven-ihankun-snapshot/</url>
+        </snapshotRepository>
+    </distributionManagement>
 
 </project>
